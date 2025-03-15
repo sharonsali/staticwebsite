@@ -1,26 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
+    <title>שרון סלעי - טיפול זוגי ומשפחתי</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Quicksand:wght@400&display=swap" rel="stylesheet">
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: 'Cormorant Garamond', serif;
+            color: #333;
             margin: 0;
-            background-color: #f3f4f6;
+            padding: 0;
+            line-height: 1.6;
+            direction: rtl;
         }
-        img {
-            max-width: 100%;
-            height: auto;
+        .full-height-section {
+            display: flex;
+            height: 100vh;
+            flex-direction: row-reverse;
+            background-color: #F7F5F0;
+        }
+        .left-image {
+            flex: 1;
+            background: url('DSC05183.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .right-text {
+            flex: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .corner-info {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .corner-info span {
+            font-size: 24px;
+        }
+        .corner-info img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .right-text h1 {
+            color: #555;
+            font-size: 100px;
+            margin: 0;
+            line-height: 1.2;
+            font-weight: 300;
+        }
+        #section2, #section3, #section4, #section5, #section6, #section7, #section8 {
+            padding: 20px;
+        }
+        #section2 { background-color: #F7F5F0; }
+        #section3, #section4, #section6 { background-color: #E1EBF5; }
+        #section5, #section7 { background-color: #F7F5F0; }
+        #section8 { 
+            background-color: #496E83; 
+            color: white;
+            display: flex;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        .footer-column {
+            display: flex;
+            align-items: flex-start;
+        }
+        .footer-column-right {
+            min-width: 200px; /* Increased width */
+            font-size: 44px;
+        }
+        .footer-column-left {
+            flex: 1;
+            padding-right: 40px;
+            text-align: right;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .footer-column-left p {
+            margin: 5px 0;
+        }
+        .feedback-rotator {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 26px;
+            color: #555;
+            max-width: 500px;
+        }
+        .quote {
+            display: none;
+        }
+        .quote.active {
+            display: block;
+            word-wrap: break-word;
+        }
+        .quote-author {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 16px;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ccc;
+            margin: 0;
+        }
+        .full-width-image {
+            width: 100%;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .full-height-section {
+                flex-direction: column;
+            }
+            .left-image, .right-text {
+                height: 50vh;
+            }
+            .right-text h1 {
+                font-size: 50px;
+            }
+            #section8 {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .footer-column-left, .footer-column-right {
+                min-width: auto;
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
-	Dev
-    <img src="under-construction.gif" alt="Under Construction">
+
+<section id="section1" class="full-height-section">
+    <div class="left-image"></div>
+    <div class="right-text">
+        <div class="corner-info">
+            <span>שרון סלעי</span>
+            <img src="hands_icon.png" alt="תמונה קטנה">
+        </div>
+        <div>
+            <h1>טיפול זוגי<br>ומשפחתי</h1>
+            <p>קצת עליי בכמה מילים</p>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<section id="section2">
+    <h2>במה אני מאמין</h2>
+    <p>טקסט מדומה על האמונות והערכים שלי.</p>
+</section>
+
+<hr>
+
+<section id="section3">
+    <h2>קצת עליי</h2>
+    <p>טקסט מדומה על הרקע והניסיון שלי.</p>
+</section>
+
+<img src="therapist-office-decor.jpg" alt="Office Decor" class="full-width-image">
+
+<hr>
+
+<section id="section4">
+    <h2>שירותים</h2>
+    <p>תיאור השירותים המוצעים.</p>
+</section>
+
+<hr>
+
+<section id="section5">
+    <h2>הגישה שלי</h2>
+    <p>תיאור הגישה הטיפולית שלי.</p>
+</section>
+
+<hr>
+
+<section id="section6">
+    <h2>מה מספרים המטופלים?</h2>
+    <div class="feedback-rotator">
+        <div class="quote active">
+            <p>"שרון מכינה ארוחות צהריים מצוינות, בעיקר בימי שבת. כל המשפחה נהיית עייפה מרוב אוכל"</p>
+            <div class="quote-author">- ע.ס.</div>
+        </div>
+        <div class="quote">
+            <p>"Another testimonial that emphasizes the positive impact of the sessions."</p>
+            <div class="quote-author">- Client B</div>
+        </div>
+        <div class="quote">
+            <p>"A third quote that highlights the benefits and personal growth experienced."</p>
+            <div class="quote-author">- Client C</div>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<section id="section7">
+    <h2>שאלות נפוצות</h2>
+    <p>תשובות לשאלות נפוצות שונות.</p>
+</section>
+
+<hr>
+
+<footer id="section8">
+    <div class="footer-column-right">
+        שרון סלעי
+    </div>
+    <div class="footer-column-left">
+        <p>054-4925259</p>
+        <p>sharonsali1974@gmail.com</p>
+        <br>
+        <p>גזית 1ב, זכרון יעקב</p>
+    </div>
+</footer>
+
+<script>
+    let currentQuoteIndex = 0;
+    const quotes = document.querySelectorAll('.quote');
+    const totalQuotes = quotes.length;
+
+    function showNextQuote() {
+        quotes[currentQuoteIndex].classList.remove('active');
+        currentQuoteIndex = (currentQuoteIndex + 1) % totalQuotes;
+        quotes[currentQuoteIndex].classList.add('active');
+    }
+
+    setInterval(showNextQuote, 5000); // Change quote every 5 seconds
+</script>
+
 </body>
 </html>

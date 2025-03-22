@@ -13,6 +13,7 @@
             padding: 0;
             line-height: 1.6;
             direction: rtl;
+            background-color: #F7F5F0; /* Added background color */
         }
         .full-height-section {
             display: flex;
@@ -29,9 +30,9 @@
             flex: 1;
             position: relative;
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
-            padding: 20px;
+            padding: 20px 40px; /* Increased right padding to prevent overlap */
         }
         .corner-info {
             position: absolute;
@@ -39,7 +40,32 @@
             right: 20px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            width: 95%; /* Adjusted width to 95% */
+        }
+        .corner-info .right-side {
+            display: flex;
+            align-items: center;
             justify-content: flex-end;
+        }
+        .corner-info .left-side-contact-items {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-family: sans-serif;
+            font-size: 16px;
+        }
+        .corner-info .left-side-contact-items span {
+            font-size: 16px;
+            margin-left: 10px; /* Set margin-left to 10px */
+        }
+        .corner-info .left-side-contact-items a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .corner-info .left-side-contact-items img {
+            height: 20px;
+            width: auto;
         }
         .corner-info span {
             font-size: 24px;
@@ -47,7 +73,7 @@
         .corner-info img {
             width: 40px;
             height: 40px;
-            margin-right: 10px;
+            margin-left: 10px;
         }
         .right-text h1 {
             color: #555;
@@ -56,10 +82,24 @@
             line-height: 1.2;
             font-weight: 300;
         }
-        #section2, #section3, #section4, #section5, #section6, #section7, #section8 {
-            padding: 20px;
+        section {
+            padding: 20px 0;
+            margin: 0;
+            width: 100%;
         }
-        #section2 { background-color: #F7F5F0; }
+        #section2, #section3 {
+            text-align: center;
+            background-color: #F7F5F0;
+        }
+        #section2, #section3 h2 {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        #section2 p, #section3 p {
+            font-size: 37px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
         #section3, #section4, #section6 { background-color: #E1EBF5; }
         #section5, #section7 { background-color: #F7F5F0; }
         #section8 { 
@@ -73,12 +113,28 @@
             margin-bottom: 10px;
             font-weight: 300;
         }
+        .faq-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .question {
+            flex: 1;
+            margin-left: 20px;
+            text-align: right;
+            font-weight: bold;
+        }
+        .answer {
+            flex: 1;
+            text-align: left;
+            font-family: 'Quicksand', sans-serif;
+        }
         .footer-column {
             display: flex;
             align-items: flex-start;
         }
         .footer-column-right {
-            min-width: 200px; /* Increased width */
+            min-width: 200px;
             font-size: 44px;
         }
         .footer-column-left {
@@ -95,7 +151,7 @@
             width: 80%;
             margin: 0 auto;
             text-align: center;
-            font-size: 26px;
+            font-size: 37px; /* Updated font size */
             color: #555;
             max-width: 500px;
         }
@@ -109,7 +165,7 @@
         .quote-author {
             margin-top: 10px;
             font-style: italic;
-            font-size: 16px;
+            font-size: 20px; /* Updated font size */
         }
         hr {
             border: 0;
@@ -140,6 +196,14 @@
                 min-width: auto;
                 padding: 10px;
             }
+            .faq-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .question, .answer {
+                text-align: center;
+                margin: 0;
+            }
         }
     </style>
 </head>
@@ -149,12 +213,28 @@
     <div class="left-image"></div>
     <div class="right-text">
         <div class="corner-info">
-            <span>שרון סלעי</span>
-            <img src="hands_icon.png" alt="תמונה קטנה">
+            <div class="right-side">
+                <span>שרון סלעי</span>
+                <img src="hands_icon.png" alt="תמונה קטנה">
+            </div>
+            <div class="left-side-contact-items">
+                <span>054-4925259</span>
+                <span>|</span>
+                <span>גזית 1ב, זכרון יעקב</span>
+                <a href="https://wa.me/972544925259" target="_blank">
+                    <img src="whatsapp_icon.png" alt="WhatsApp">
+                </a>
+                <a href="tel:054-4925259">
+                    <img src="phone_icon.png" alt="Phone">
+                </a>
+                <a href="mailto:sharonsali1974@gmail.com">
+                    <img src="email_icon.png" alt="Email">
+                </a>
+            </div>
         </div>
         <div>
             <h1>טיפול זוגי<br>ומשפחתי</h1>
-            <p>קצת עליי בכמה מילים</p>
+            <p>קצת עלי בכמה מילים</p>
         </div>
     </div>
 </section>
@@ -163,14 +243,15 @@
 
 <section id="section2">
     <h2>במה אני מאמין</h2>
-    <p>טקסט מדומה על האמונות והערכים שלי.</p>
+    <p>במסע הטיפולי, אני מאמינה בכוחו של ריפוי באמצעות גילוי עצמי והבנה. המטרה שלי היא לצעוד לצדך במרדף אחר רווחה נפשית ושלווה פנימית.</p>
 </section>
 
 <hr>
 
 <section id="section3">
-    <h2>קצת עליי</h2>
-    <p>טקסט מדומה על הרקע והניסיון שלי.</p>
+    <h2>קצת עלי</h2>
+    <p>שרון היא מטפלת זוגית ומשפחתית, בעלת הסמכה רחבה ונסיון עשיר בתחומי הרווחה והטיפול. שרון סיימה תואר ראשון בעבודה סוציאלית, באוניברסיטת חיפה, בהצטיינות. לשרון תואר שני בעבודה סוציאלית מאוניברסיטת תל אביב. את הסמכתה הקלינית בטיפול זוגי ומשפחתי עשתה בקורס מעמיק, רב שנתי, במכון ברקאי.</p>
+    <p>לשרון ותק של שנים רבות, במגזר הציבורי והפרטי, בתחומי הרווחה והטיפול. לשרון נסיון עשיר ומגוון שנצבר במאות שעות טיפול שהעבירה.</p>
 </section>
 
 <img src="therapist-office-decor.jpg" alt="Office Decor" class="full-width-image">
@@ -199,12 +280,12 @@
             <div class="quote-author">- ע.ס.</div>
         </div>
         <div class="quote">
-            <p>"Another testimonial that emphasizes the positive impact of the sessions."</p>
-            <div class="quote-author">- Client B</div>
+            <p>"שרון היא מטפלת מדהימה שהצליחה להוביל אותי למקומות של רוגע ושלמות עצמית"</p>
+            <div class="quote-author">- ר.כ.</div>
         </div>
         <div class="quote">
-            <p>"A third quote that highlights the benefits and personal growth experienced."</p>
-            <div class="quote-author">- Client C</div>
+            <p>"הטיפול עם שרון היה חוויה משנה חיים שהעניקה לי כלים להתמודדות עם קשיים"</p>
+            <div class="quote-author">- י.ד.</div>
         </div>
     </div>
 </section>
@@ -213,7 +294,18 @@
 
 <section id="section7">
     <h2>שאלות נפוצות</h2>
-    <p>תשובות לשאלות נפוצות שונות.</p>
+    <div class="faq-item">
+        <div class="question">מהם שעות הפעילות של המשרד?</div>
+        <div class="answer">המשרד פתוח בימים ראשון עד חמישי בין השעות 9:00 עד 18:00.</div>
+    </div>
+    <div class="faq-item">
+        <div class="question">האם יש חניה זמינה באזור?</div>
+        <div class="answer">כן, יש חניה חינם זמינה בסמוך למשרד.</div>
+    </div>
+    <div class="faq-item">
+        <div class="question">כיצד ניתן לקבוע פגישת ייעוץ?</div>
+        <div class="answer">ניתן ליצור קשר בטלפון או בדוא"ל לקביעת פגישה.</div>
+    </div>
 </section>
 
 <hr>

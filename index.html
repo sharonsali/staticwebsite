@@ -146,10 +146,10 @@
             width: 100%;
         }
         h2 {
-            font-size: 64px; /* Consistent font size for all h2 */
-            text-align: center; /* Center horizontally */
+            font-size: 64px;
+            text-align: center;
             margin-bottom: 20px;
-			font-weight: 300;
+            font-weight: 300; /* Consistent font weight for all h2 */
         }
         #section2 {
             text-align: center;
@@ -163,11 +163,57 @@
         #section3 {
             text-align: center;
             background-color: #F7F5F0; /* Swapped background color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px; /* Added bottom margin to section 3 */
         }
-        #section3 p {
+        .slideshow-container {
+            position: relative;
+            max-width: 80%; /* Proportional width */
+            border: 5px solid #ccc; /* Frame around the slideshow */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto; /* Center horizontally */
+        }
+        .slide {
+            display: none;
+            padding: 20px;
             font-size: 37px;
-            margin: 0 auto;
-            max-width: 800px;
+            line-height: 1; /* Normal line height */
+            text-align: right; /* Right align text */
+            background-color: rgba(225, 235, 245, 0.8); /* Calm background */
+            max-height: 300px;
+            overflow: hidden;
+            word-wrap: break-word;
+            opacity: 0;
+            transition: opacity 0.5s ease; /* Fade effect */
+            animation: fadeIn 3s;
+            -webkit-animation: fadeIn 2s;
+            -moz-animation: fadeIn 2s;
+            -o-animation: fadeIn 2s;
+            -ms-animation: fadeIn 2s;
+        }
+        .active {
+            display: block;
+            opacity: 1;
+        }
+        .slide-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .slide-button {
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #a2cce3; /* Light blue for unselected */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 150%; /* Increased font size by 50% */
+        }
+        .slide-button.active {
+            background-color: #496E83; /* Darker blue for selected */
         }
         #section4, #section6 { background-color: #E1EBF5; }
         #section5, #section7 { background-color: #F7F5F0; }
@@ -221,9 +267,12 @@
         }
         .quote {
             display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease; /* Fade effect */
         }
         .quote.active {
             display: block;
+            opacity: 1;
             word-wrap: break-word;
         }
         .quote-author {
@@ -240,6 +289,26 @@
         .full-width-image {
             width: 100%;
             display: block;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @-moz-keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @-webkit-keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @-o-keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @-ms-keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
         @media (max-width: 768px) {
             .top-bar {
@@ -332,7 +401,22 @@
 
 <section id="section3">
     <h2>תחומי טיפול</h2>
-    <p>תיאור השירותים המוצעים.</p>
+    <div class="slideshow-container">
+        <div class="slide-buttons">
+            <button class="slide-button active" onclick="showSlide(0)">טיפול פרטני</button>
+            <button class="slide-button" onclick="showSlide(1)">טיפול משפחתי</button>
+            <button class="slide-button" onclick="showSlide(2)">טיפול זוגי</button>
+        </div>
+        <div class="slide active" id="slide1">
+            <p>טיפול פרטני הוא תהליך אישי שבו המטפל והמטופל עובדים יחד כדי להבין ולפתור בעיות רגשיות, פסיכולוגיות או התנהגותיות. הטיפול מתמקד בצרכים ובמטרות האישיות של המטופל, תוך חיזוק הכוחות הפנימיים שלו והתמודדות עם קשיים אישיים. זהו מסע של גילוי עצמי והעצמה, שבו המטופל מקבל כלים להתמודדות עם אתגרים ולקידום רווחה נפשית.</p>
+        </div>
+        <div class="slide" id="slide2">
+            <p>טיפול משפחתי מתמקד בתקשורת וביחסים בתוך המשפחה. זהו תהליך שבו כל בני המשפחה לוקחים חלק, במטרה לשפר את הקשרים ביניהם ולהתמודד עם בעיות משפחתיות מורכבות. הטיפול מסייע למשפחות להבין את הדינמיקות הפנימיות, לבנות תמיכה הדדית, וליצור שינוי חיובי באווירה המשפחתית. מטרתו היא ליצור סביבה תומכת ומאוזנת לכל בני המשפחה.</p>
+        </div>
+        <div class="slide" id="slide3">
+            <p>טיפול זוגי מתמקד בקשר בין בני זוג ובפתרון בעיות המופיעות במערכת היחסים. הטיפול מאפשר לבני הזוג להבין את הצרכים והרגשות אחד של השני, לשפר את התקשורת ולבנות אמון מחודש. זהו תהליך שבו בני הזוג לומדים להתמודד עם קונפליקטים, לשפר את הקרבה והאינטימיות, ולחזק את הבסיס המשותף שלהם לקראת עתיד משותף יותר בריא ומאושר.</p>
+        </div>
+    </div>
 </section>
 
 <hr>
@@ -395,13 +479,23 @@
 </footer>
 
 <script>
-    let currentQuoteIndex = 0;
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slideButtons = document.querySelectorAll('.slide-button');
     const quotes = document.querySelectorAll('.quote');
-    const totalQuotes = quotes.length;
+    let currentQuoteIndex = 0;
+
+    function showSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        slideButtons[currentSlide].classList.remove('active');
+        currentSlide = index;
+        slides[currentSlide].classList.add('active');
+        slideButtons[currentSlide].classList.add('active');
+    }
 
     function showNextQuote() {
         quotes[currentQuoteIndex].classList.remove('active');
-        currentQuoteIndex = (currentQuoteIndex + 1) % totalQuotes;
+        currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
         quotes[currentQuoteIndex].classList.add('active');
     }
 

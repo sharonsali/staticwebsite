@@ -223,21 +223,39 @@
             display: flex;
             padding: 20px;
         }
+        .faq-container {
+            max-width: 60%;
+            margin: 0 auto;
+        }
         .faq-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            cursor: pointer;
+        }
+        .faq-top {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 20px;
+            align-items: center;
         }
-        .question {
-            flex: 1;
-            margin-left: 20px;
+        .faq-top .question {
             text-align: right;
             font-weight: bold;
+            font-size: 28px;
+            margin: 0;
+            flex: 1;
+            cursor: pointer;
+        }
+        .faq-top svg {
+            cursor: pointer;
+            margin-left: 10px;
         }
         .answer {
-            flex: 1;
-            text-align: left;
+            display: none;
+            padding-top: 5px;
+            text-align: right;
+            font-size: 24px;
             font-family: 'Quicksand', sans-serif;
+            word-wrap: break-word;
         }
         .footer-column {
             display: flex;
@@ -335,6 +353,9 @@
             .faq-item {
                 flex-direction: column;
                 text-align: center;
+            }
+            .faq-top {
+                flex-direction: column;
             }
             .question, .answer {
                 text-align: center;
@@ -450,17 +471,61 @@
 
 <section id="section6">
     <h2>שאלות נפוצות</h2>
-    <div class="faq-item">
-        <div class="question">מהם שעות הפעילות של המשרד?</div>
-        <div class="answer">המשרד פתוח בימים ראשון עד חמישי בין השעות 9:00 עד 18:00.</div>
-    </div>
-    <div class="faq-item">
-        <div class="question">האם יש חניה זמינה באזור?</div>
-        <div class="answer">כן, יש חניה חינם זמינה בסמוך למשרד.</div>
-    </div>
-    <div class="faq-item">
-        <div class="question">כיצד ניתן לקבוע פגישת ייעוץ?</div>
-        <div class="answer">ניתן ליצור קשר בטלפון או בדוא"ל לקביעת פגישה.</div>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-top">
+                <h3 class="question" onclick="toggleAnswer(this)">מהם שעות הפעילות של המשרד?</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="arrowDown" onclick="toggleAnswer(this)">
+                    <path d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"></path>
+                </svg>
+            </div>
+            <div class="answer">המשרד פתוח בימים ראשון עד חמישי בין השעות 9:00 עד 18:00. כל לקוח מתקבל באווירה מקצועית ומסבירה פנים, תוך תשומת לב לצרכיו האישיים.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-top">
+                <h3 class="question" onclick="toggleAnswer(this)">האם יש חניה זמינה באזור?</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="arrowDown" onclick="toggleAnswer(this)">
+                    <path d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"></path>
+                </svg>
+            </div>
+            <div class="answer">כן, יש חניה חינם זמינה בסמוך למשרד. אנו מבטיחים שהגישה למשרד תהיה נוחה וידידותית לכל לקוח.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-top">
+                <h3 class="question" onclick="toggleAnswer(this)">כיצד ניתן לקבוע פגישת ייעוץ?</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="arrowDown" onclick="toggleAnswer(this)">
+                    <path d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"></path>
+                </svg>
+            </div>
+            <div class="answer">ניתן ליצור קשר בטלפון או בדוא"ל לקביעת פגישה. אנו מציעים זמינות גבוהה וגמישות בשעות הפגישות בהתאם לצורכי הלקוח.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-top">
+                <h3 class="question" onclick="toggleAnswer(this)">מהו סוג הטיפול הניתן?</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="arrowDown" onclick="toggleAnswer(this)">
+                    <path d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"></path>
+                </svg>
+            </div>
+            <div class="answer">אנו מציעים מגוון סוגי טיפול, כולל טיפול פרטני, זוגי ומשפחתי, בהתאמה אישית לצרכי המטופל.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-top">
+                <h3 class="question" onclick="toggleAnswer(this)">כמה זמן נמשך טיפול טיפוסי?</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="arrowDown" onclick="toggleAnswer(this)">
+                    <path d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"></path>
+                </svg>
+            </div>
+            <div class="answer">אורך הטיפול משתנה בהתאם לצרכי המטופל, אך כל מפגש נמשך בדרך כלל בין 60 ל-90 דקות.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-top">
+                <h3 class="question" onclick="toggleAnswer(this)">האם ניתן לקבל טיפול אונליין?</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="arrowDown" onclick="toggleAnswer(this)">
+                    <path d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"></path>
+                </svg>
+            </div>
+            <div class="answer">כן, אנו מציעים גם טיפול אונליין באמצעות פלטפורמות מאובטחות, בהתאם לנוחות המטופל.</div>
+        </div>
     </div>
 </section>
 
@@ -500,6 +565,21 @@
     }
 
     setInterval(showNextQuote, 5000); // Change quote every 5 seconds
+
+    function toggleAnswer(element) {
+        const faqItem = element.closest('.faq-item');
+        const answer = faqItem.querySelector('.answer');
+        const svgElement = faqItem.querySelector('svg');
+        const isExpanded = answer.style.display === 'block';
+
+        if (isExpanded) {
+            answer.style.display = 'none';
+            svgElement.innerHTML = '<path d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"></path>';
+        } else {
+            answer.style.display = 'block';
+            svgElement.innerHTML = '<path d="M8.14644661,14.858836 C7.95118446,14.6635739 7.95118446,14.3469914 8.14644661,14.1517292 L12.4989857,9.79289322 L16.8573469,14.1517292 C17.052609,14.3469914 17.052609,14.6635739 16.8573469,14.858836 C16.6620847,15.0540981 16.3455022,15.0540981 16.1502401,14.858836 L12.4989857,11.2071068 L8.85355339,14.858836 C8.65829124,15.0540981 8.34170876,15.0540981 8.14644661,14.858836 Z"></path>';
+        }
+    }
 </script>
 
 </body>

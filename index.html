@@ -13,94 +13,165 @@
             padding: 0;
             line-height: 1.6;
             direction: rtl;
-            background-color: #F7F5F0; /* Added background color */
-        }
-        .full-height-section {
-            display: flex;
-            height: 100vh;
-            flex-direction: row-reverse;
             background-color: #F7F5F0;
         }
-        .left-image {
-            flex: 1;
-            background: url('DSC05183.jpg') no-repeat center center;
-            background-size: cover;
-        }
-        .right-text {
-            flex: 1;
-            position: relative;
+        .top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #F7F5F0;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 20px 40px; /* Increased right padding to prevent overlap */
-        }
-        .corner-info {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            align-items: center;
             justify-content: space-between;
-            width: 95%; /* Adjusted width to 95% */
+            align-items: center;
+            padding: 2px 40px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+            line-height: 1.0;
         }
-        .corner-info .right-side {
+        .top-bar .right-side {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
         }
-        .corner-info .left-side-contact-items {
+        .top-bar .right-side img {
+            width: 70px;
+            height: auto;
+            margin-left: 10px;
+        }
+        .top-bar .right-side .text {
+            text-align: center;
+        }
+        .top-bar .right-side .text span:first-child {
+            font-size: 37px;
+            display: block;
+            margin: 0;
+        }
+        .top-bar .right-side .text span:last-child {
+            font-size: 16px;
+            display: block;
+            margin-top: 0px;
+        }
+        .top-bar .left-side-contact-items {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
             font-family: sans-serif;
             font-size: 16px;
+            margin-left: 60px;
         }
-        .corner-info .left-side-contact-items span {
-            font-size: 16px;
-            margin-left: 10px; /* Set margin-left to 10px */
+        .top-bar .left-side-contact-items span {
+            margin-left: 10px;
         }
-        .corner-info .left-side-contact-items a {
+        .top-bar .left-side-contact-items a {
             text-decoration: none;
             color: inherit;
+            margin-left: 10px;
         }
-        .corner-info .left-side-contact-items img {
+        .top-bar .left-side-contact-items img {
             height: 20px;
             width: auto;
         }
-        .corner-info span {
-            font-size: 24px;
+        .section1 {
+            background-color: #F7F5F0;
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content */
         }
-        .corner-info img {
-            width: 40px;
-            height: 40px;
-            margin-left: 10px;
+        .section1_top {
+            display: flex;
+            flex: 1;
+            justify-content: center; /* Center left and right parts */
+            padding: 10px 20px; /* Reduced vertical gap */
         }
-        .right-text h1 {
+        .section1_top .right {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-left: 50px; /* Increased left margin */
+        }
+        .section1_top .right .inner-text {
+            text-align: right; /* Right justify text inside inner class */
+        }
+        .section1_top .right h1 {
             color: #555;
             font-size: 100px;
             margin: 0;
             line-height: 1.2;
             font-weight: 300;
         }
+        .section1_top .left {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .section1_top .left img {
+            height: 300px;
+            width: auto;
+            border: 5px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 50px; /* Increased right margin */
+        }
+        .section1_bottom {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px; /* Increased top margin */
+        }
+        .section1_bottom .button {
+            width: 150px;
+            height: 150px;
+            background-color: #496E83;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 10px;
+            cursor: pointer;
+            text-align: center;
+            clip-path: polygon(
+                0 10%,
+                10% 0,
+                90% 0,
+                100% 0%,
+                100% 90%,
+                90% 100%,
+                0% 100%,
+                0% 90%,
+                0% 10%
+            );
+        }
         section {
             padding: 20px 0;
             margin: 0;
             width: 100%;
         }
-        #section2, #section3 {
+        #section2 {
             text-align: center;
-            background-color: #F7F5F0;
+            background-color: #E1EBF5; /* Swapped background color */
         }
-        #section2, #section3 h2 {
+        #section2 h2 {
             font-size: 64px;
             margin-bottom: 20px;
         }
-        #section2 p, #section3 p {
+        #section2 p {
             font-size: 37px;
             margin: 0 auto;
             max-width: 800px;
         }
-        #section3, #section4, #section6 { background-color: #E1EBF5; }
+        #section3 {
+            text-align: center;
+            background-color: #F7F5F0; /* Swapped background color */
+        }
+        #section3 h2 {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        #section3 p {
+            font-size: 37px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        #section4, #section6 { background-color: #E1EBF5; }
         #section5, #section7 { background-color: #F7F5F0; }
         #section8 { 
             background-color: #496E83; 
@@ -151,7 +222,7 @@
             width: 80%;
             margin: 0 auto;
             text-align: center;
-            font-size: 37px; /* Updated font size */
+            font-size: 37px;
             color: #555;
             max-width: 500px;
         }
@@ -165,7 +236,7 @@
         .quote-author {
             margin-top: 10px;
             font-style: italic;
-            font-size: 20px; /* Updated font size */
+            font-size: 20px;
         }
         hr {
             border: 0;
@@ -178,13 +249,16 @@
             display: block;
         }
         @media (max-width: 768px) {
-            .full-height-section {
+            .top-bar {
                 flex-direction: column;
+                align-items: flex-start;
+                padding: 2px 20px;
             }
-            .left-image, .right-text {
-                height: 50vh;
+            .section1_top {
+                flex-direction: column;
+                align-items: center;
             }
-            .right-text h1 {
+            .section1_top .right h1 {
                 font-size: 50px;
             }
             #section8 {
@@ -209,70 +283,75 @@
 </head>
 <body>
 
-<section id="section1" class="full-height-section">
-    <div class="left-image"></div>
-    <div class="right-text">
-        <div class="corner-info">
-            <div class="right-side">
-                <span>שרון סלעי</span>
-                <img src="hands_icon.png" alt="תמונה קטנה">
-            </div>
-            <div class="left-side-contact-items">
-                <span>054-4925259</span>
-                <span>|</span>
-                <span>גזית 1ב, זכרון יעקב</span>
-                <a href="https://wa.me/972544925259" target="_blank">
-                    <img src="whatsapp_icon.png" alt="WhatsApp">
-                </a>
-                <a href="tel:054-4925259">
-                    <img src="phone_icon.png" alt="Phone">
-                </a>
-                <a href="mailto:sharonsali1974@gmail.com">
-                    <img src="email_icon.png" alt="Email">
-                </a>
+<div class="top-bar">
+    <div class="right-side">
+        <img src="logo.png" alt="Logo">
+        <div class="text">
+            <span>שרון סלעי</span>
+            <span>מטפלת זוגית ומשפחתית מוסמכת</span>
+        </div>
+    </div>
+    <div class="left-side-contact-items">
+        <span>054-4925259</span>
+        <span>|</span>
+        <span>גזית 1ב, זכרון יעקב</span>
+        <a href="https://wa.me/972544925259" target="_blank">
+            <img src="whatsapp_icon.png" alt="WhatsApp">
+        </a>
+        <a href="tel:054-4925259">
+            <img src="phone_icon.png" alt="Phone">
+        </a>
+        <a href="mailto:sharonsali1974@gmail.com">
+            <img src="email_icon.png" alt="Email">
+        </a>
+    </div>
+</div>
+
+<section id="section1" class="section1">
+    <div class="section1_top">
+        <div class="right">
+            <div class="inner-text">
+                <h1>טיפול זוגי<br>ומשפחתי</h1>
             </div>
         </div>
-        <div>
-            <h1>טיפול זוגי<br>ומשפחתי</h1>
-            <p>קצת עלי בכמה מילים</p>
+        <div class="left">
+            <img src="sharon.jpg" alt="Sharon">
         </div>
+    </div>
+    <div class="section1_bottom">
+        <div class="button" onclick="document.getElementById('section2').scrollIntoView();">קצת עלי</div>
+        <div class="button" onclick="document.getElementById('section3').scrollIntoView();">תחומי טיפול</div>
+        <div class="button" onclick="document.getElementById('section4').scrollIntoView();">איפה נפגש?</div>
+        <div class="button" onclick="document.getElementById('section5').scrollIntoView();">מה מספרים המטופלים?</div>
+        <div class="button" onclick="document.getElementById('section6').scrollIntoView();">שאלות ותשובות</div>
     </div>
 </section>
 
 <hr>
 
 <section id="section2">
-    <h2>במה אני מאמין</h2>
-    <p>במסע הטיפולי, אני מאמינה בכוחו של ריפוי באמצעות גילוי עצמי והבנה. המטרה שלי היא לצעוד לצדך במרדף אחר רווחה נפשית ושלווה פנימית.</p>
-</section>
-
-<hr>
-
-<section id="section3">
     <h2>קצת עלי</h2>
     <p>שרון היא מטפלת זוגית ומשפחתית, בעלת הסמכה רחבה ונסיון עשיר בתחומי הרווחה והטיפול. שרון סיימה תואר ראשון בעבודה סוציאלית, באוניברסיטת חיפה, בהצטיינות. לשרון תואר שני בעבודה סוציאלית מאוניברסיטת תל אביב. את הסמכתה הקלינית בטיפול זוגי ומשפחתי עשתה בקורס מעמיק, רב שנתי, במכון ברקאי.</p>
     <p>לשרון ותק של שנים רבות, במגזר הציבורי והפרטי, בתחומי הרווחה והטיפול. לשרון נסיון עשיר ומגוון שנצבר במאות שעות טיפול שהעבירה.</p>
 </section>
 
-<img src="therapist-office-decor.jpg" alt="Office Decor" class="full-width-image">
-
 <hr>
 
-<section id="section4">
-    <h2>שירותים</h2>
+<section id="section3">
+    <h2>תחומי טיפול</h2>
     <p>תיאור השירותים המוצעים.</p>
 </section>
 
 <hr>
 
-<section id="section5">
-    <h2>הגישה שלי</h2>
+<section id="section4">
+    <h2>איפה נפגש?</h2>
     <p>תיאור הגישה הטיפולית שלי.</p>
 </section>
 
 <hr>
 
-<section id="section6">
+<section id="section5">
     <h2>מה מספרים המטופלים?</h2>
     <div class="feedback-rotator">
         <div class="quote active">
@@ -292,7 +371,7 @@
 
 <hr>
 
-<section id="section7">
+<section id="section6">
     <h2>שאלות נפוצות</h2>
     <div class="faq-item">
         <div class="question">מהם שעות הפעילות של המשרד?</div>
@@ -310,7 +389,7 @@
 
 <hr>
 
-<footer id="section8">
+<footer id="section7">
     <div class="footer-column-right">
         שרון סלעי
     </div>

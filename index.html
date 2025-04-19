@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="שרון סלעי היא מטפלת זוגית ומשפחתית מוסמכת בזכרון יעקב. מתמחה בטיפול פרטני, זוגי ומשפחתי.">
     <title>שרון סלעי - טיפול זוגי ומשפחתי</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Add your favicon -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Quicksand:wght@400&display=swap" rel="stylesheet">
     <style>
         body {
@@ -84,12 +86,15 @@
         }
         .section1_top .right {
             display: flex;
+			max-width: 30%;
             justify-content: flex-start;
             align-items: center;
             margin-left: 50px; /* Increased left margin */
         }
         .section1_top .right .inner-text {
-            text-align: right; /* Right justify text inside inner class */
+			word-wrap: break-word;
+			overflow: hidden;
+			text-align: right; /* Right justify text inside inner class */
         }
         .section1_top .right h1 {
             color: #555;
@@ -119,7 +124,7 @@
         }
         .section1_bottom .button {
             width: 150px;
-            height: 150px;
+            height: 80px;
             background-color: #496E83;
             color: white;
             display: flex;
@@ -129,6 +134,7 @@
             cursor: pointer;
             text-align: center;
             border-radius: 20px;
+			font-size: 18px;
         }
         section {
             padding: 20px 0;
@@ -146,7 +152,7 @@
             background-color: #E1EBF5; /* Swapped background color */
         }
         #section2 p {
-            font-size: 37px;
+            font-size: 26px;
             margin: 0 auto;
             max-width: 800px;
         }
@@ -160,19 +166,16 @@
         }
         .slideshow-container {
             position: relative;
-            max-width: 80%; /* Proportional width */
-            border: 5px solid #ccc; /* Frame around the slideshow */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 90%; /* Proportional width */
+            /*border: 5px solid #ccc; /* Frame around the slideshow */
+            /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
             margin: 0 auto; /* Center horizontally */
         }
         .slide {
             display: none;
-            padding: 20px;
-            font-size: 37px;
+            font-size: 26px;
             line-height: 1; /* Normal line height */
             text-align: right; /* Right align text */
-            background-color: rgba(225, 235, 245, 0.8); /* Calm background */
-            max-height: 300px;
             overflow: hidden;
             word-wrap: break-word;
             opacity: 0;
@@ -231,7 +234,7 @@
             max-width: 80%;
         }
         #section4 .left h2 {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: bold;
             margin-bottom: 10px;
         }
@@ -240,17 +243,12 @@
             margin-bottom: 20px;
         }
         #section5 { background-color: #F7F5F0; }
-        #section6 { background-color: #E1EBF5; } /* Match the background color of section 4 */
+        #section6 { background-color: #E1EBF5; } 
         #section7 { 
-            background-color: #496E83; /* Updated background color */
+            background-color: #496E83; 
             color: white; /* Ensure text is visible against the dark background */
         }
-        #section8 { 
-            background-color: #496E83; 
-            color: white;
-            display: flex;
-            padding: 20px;
-        }
+
         .faq-container {
             max-width: 60%;
             margin: 0 auto;
@@ -285,6 +283,50 @@
             font-family: 'Quicksand', sans-serif;
             word-wrap: break-word;
         }
+		
+		#section3b {
+            text-align: center;
+            background-color: #F7F5F0; /* Swapped background color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px; /* Added bottom margin to section 3 */
+        }
+		.areas-container {
+			width: 90%;
+            margin: 0 auto;
+        }
+        .area-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            cursor: pointer;
+        }
+        .area-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .area-top .area {
+            text-align: right;
+            font-weight: bold;
+            font-size: 28px;
+            margin: 0;
+            flex: 1;
+            cursor: pointer;
+        }
+        .area-top svg {
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .area-details {
+            display: none;
+            padding-top: 5px;
+            text-align: right;
+            font-size: 24px;
+            /*font-family: 'Quicksand', sans-serif;*/
+            word-wrap: break-word;
+        }
+		
         .footer-column {
             display: flex;
             align-items: flex-start;
@@ -309,7 +351,7 @@
             width: 80%;
             margin: 0 auto;
             text-align: center;
-            font-size: 37px;
+            font-size: 26px;
             color: #555;
             max-width: 500px;
         }
@@ -358,20 +400,95 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
-        @media (max-width: 768px) {
-            .top-bar {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 2px 20px;
-            }
+		/* Accessibility - Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: auto;
+            right: 0px;
+            background-color: #007bff;
+            color: white;
+            padding: 8px;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+		
+        @media (max-width: 1080px) {
+			.top-bar {
+			    flex-direction: column;
+                align-items: center;
+                padding: 2px 0px;
+			}
+			.top-bar .right-side {
+				margin-left: 40px;
+				margin-bottom: 5px;
+			}
+
+			.top-bar .right-side img {
+				width: 35px;
+				height: auto;
+			}
+			.top-bar .right-side .text span:first-child {
+				font-size: 26px;
+			}
+			.top-bar .right-side .text span:last-child {
+				font-size: 12px;
+			}
+			.top-bar .left-side-contact-items {
+				font-size: 12px;
+				margin-left: 0px;
+			}
+			.top-bar .left-side-contact-items img {
+				height: 15px;
+			}
+			
+			h2 {
+				font-size: 34px;
+				margin-bottom: 20px;
+				font-weight: 600; /* Consistent font weight for all h2 */
+			}
+			
+			section {
+				padding-top: 2px;
+			}
+			.section1 {
+				margin-top: 40px;
+				padding-top: 20px;
+			}
             .section1_top {
                 flex-direction: column;
-                align-items: center;
+                align-items: center;				
             }
+			.section1_top .right {
+                max-width: 100%;
+				margin-left: 0;
+            }
+
             .section1_top .right h1 {
                 font-size: 50px;
             }
-            #section4 .content {
+			.section1_top .left img {
+				height: auto;
+				width: 100%;
+				align-items: center;
+				margin-right: 0px; 
+			}
+			.section1_bottom {
+				margin-top: 20px; 
+			}
+			.section1_bottom .button {
+				width: 20%;
+				height: 50px;
+				margin: 2 10px;
+				cursor: pointer;
+				text-align: center;
+				border-radius: 10px;
+				font-size: 0.8rem;
+			}
+			#section4 .content {
                 flex-direction: column;
                 padding: 20px;
             }
@@ -379,31 +496,25 @@
                 width: 100%;
                 height: auto;
             }
-            #section8 {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
+			.footer-column {
+				padding-right: 0px;
+			}
+          
             .footer-column-left, .footer-column-right {
                 min-width: auto;
                 padding: 10px;
             }
-            .faq-item {
-                flex-direction: column;
-                text-align: center;
+			.footer-column-right {
+                font-size: 36px;
             }
-            .faq-top {
-                flex-direction: column;
-            }
-            .question, .answer {
-                text-align: center;
-                margin: 0;
-            }
+            .faq-container {
+			    max-width: 95%;
+			}
         }
     </style>
 </head>
 <body>
-
+<main id="main-content">
 <div class="top-bar">
     <div class="right-side">
         <img src="logo.png" alt="Logo">
@@ -432,7 +543,7 @@
     <div class="section1_top">
         <div class="right">
             <div class="inner-text">
-                <h1>טיפול זוגי<br>ומשפחתי</h1>
+                <h1>טיפול זוגי ומשפחתי</h1>
             </div>
         </div>
         <div class="left">
@@ -442,7 +553,7 @@
     <div class="section1_bottom">
         <div class="button" onclick="document.getElementById('section2').scrollIntoView();">קצת עלי</div>
         <div class="button" onclick="document.getElementById('section3').scrollIntoView();">תחומי טיפול</div>
-        <div class="button" onclick="document.getElementById('section4').scrollIntoView();">איפה נפגש?</div>
+        <div class="button" onclick="document.getElementById('section4').scrollIntoView();">איך נפגשים?</div>
         <div class="button" onclick="document.getElementById('section5').scrollIntoView();">מה מספרים המטופלים?</div>
         <div class="button" onclick="document.getElementById('section6').scrollIntoView();">שאלות ותשובות</div>
     </div>
@@ -467,21 +578,97 @@
             <button class="slide-button" onclick="showSlide(2)">טיפול זוגי</button>
         </div>
         <div class="slide active" id="slide1">
-            <p>טיפול פרטני הוא תהליך אישי שבו המטפל והמטופל עובדים יחד כדי להבין ולפתור בעיות רגשיות, פסיכולוגיות או התנהגותיות. הטיפול מתמקד בצרכים ובמטרות האישיות של המטופל, תוך חיזוק הכוחות הפנימיים שלו והתמודדות עם קשיים אישיים. זהו מסע של גילוי עצמי והעצמה, שבו המטופל מקבל כלים להתמודדות עם אתגרים ולקידום רווחה נפשית.</p>
+            <p><b>טיפול פרטני הוא תהליך אישי שבו המטפל והמטופל עובדים יחד כדי להבין ולפתור בעיות רגשיות, פסיכולוגיות או התנהגותיות (קושי רגשי, משבר, תחושת תקיעות, חרדה, דיכאון, או כל אתגר נפשי אחר שמכביד). הטיפול מתמקד בצרכים ובמטרות האישיות של המטופל, תוך חיזוק הכוחות הפנימיים, בניית ביטחון עצמי, חיזוק תחושת הערך והיכולת האישית. זהו מסע של גילוי עצמי והעצמה, שבו המטופל מקבל כלים להתמודדות עם אתגרים ולקידום רווחה נפשית.</b></p><p>
+<b>מה קורה בטיפול ?</b><br>
+תוך שיחה פתוחה וכנה המטפל מקשיב, שואל, תומך, ומסייע לאדם להבין את עצמו טוב יותר, לעבד רגשות וחוויות עבר שממשיכות להשפיע על ההווה, לזהות דפוסים שמפריעים לו, ולמצוא דרכים חדשות להתמודד עם מצבים מורכבים.
+זהו מרחב בטוח, לא שיפוטי, שבו אפשר לדבר על הכול – גם על מה שקשה, מביך או מפחיד.</p><p>
+
+<b>למה לפנות לטיפול רגשי פרטני?</b><br>
+כי לפעמים גם אנשים חזקים צריכים עזרה. כי מגיע לך להרגיש טוב יותר. כי שינוי אמיתי מתחיל בצעד קטן – ופגישה אחת יכולה להיות הצעד הראשון שלך בדרך לחיים רגועים, מאוזנים ושמחים יותר.
+
+</p>
         </div>
         <div class="slide" id="slide2">
-            <p>טיפול משפחתי מתמקד בתקשורת וביחסים בתוך המשפחה. זהו תהליך שבו כל בני המשפחה לוקחים חלק, במטרה לשפר את הקשרים ביניהם ולהתמודד עם בעיות משפחתיות מורכבות. הטיפול מסייע למשפחות להבין את הדינמיקות הפנימיות, לבנות תמיכה הדדית, וליצור שינוי חיובי באווירה המשפחתית. מטרתו היא ליצור סביבה תומכת ומאוזנת לכל בני המשפחה.</p>
+            <p><b>טיפול משפחתי מתמקד בתקשורת וביחסים בתוך המשפחה. זהו תהליך שבו כל בני המשפחה לוקחים חלק במטרה לשפר את הקשרים ביניהם ולהתמודד עם בעיות משפחתיות מורכבות. הטיפול מסייע למשפחות להבין את הדינמיקות הפנימיות, לבנות תמיכה הדדית, וליצור שינוי חיובי באווירה המשפחתית. מטרתו היא ליצור סביבה תומכת ומאוזנת לכל בני המשפחה.</b></p><p> 
+<b>מתי פונים לטיפול משפחתי ?</b><br>
+במצבים של מתחים חוזרים (ריבים בין אחים, בין הורים לילדים, בין בני זוג) או כשמרגישים שהמשפחה "תקועה" (תחושה של ריחוק, ניכור, או תקשורת לקויה) ורוצים שינוי. במצבי משבר (גירושין, אובדן, מחלה) או שינוי גדול (לידת ילד, מעבר דירה, עלייה לארץ). כשיש קושי רגשי או התנהגותי אצל אחד הילדים המשפיע על כל המשפחה.</p><p>
+<b>איך זה עובד ?</b><br>
+נפגשים עם מטפל משפחתי, לפעמים כולם יחד, לפעמים רק חלק מבני המשפחה, תלוי בצורך. הפגישות כוללות שיחה פתוחה, שבה כל אחד יכול להביע את עצמו ולשמוע את נקודת המבט של האחרים. מדברים על מה שמפריע, אבל גם על מה שעובד טוב. לומדים להקשיב, להבין, ליצר שיתוף פעולה ולנהל שיח מכבד. </p><p>
+<b>מה היתרון של טיפול משפחתי ?</b><br>
+בטיפול כזה לא מתמקדים רק באדם אחד אלא בוחנים את כל הדינמיקה המשפחתית: איך כל אחד משפיע על האחרים, ואיך הקשרים יוצרים את הבעיות וגם את הפתרונות. מכיוון שכולם לוקחים אחריות נוצרת הזדמנות אמיתית לשינוי.
+</p>
         </div>
         <div class="slide" id="slide3">
-            <p>טיפול זוגי מתמקד בקשר בין בני זוג ובפתרון בעיות המופיעות במערכת היחסים. הטיפול מאפשר לבני הזוג להבין את הצרכים והרגשות אחד של השני, לשפר את התקשורת ולבנות אמון מחודש. זהו תהליך שבו בני הזוג לומדים להתמודד עם קונפליקטים, לשפר את הקרבה והאינטימיות, ולחזק את הבסיס המשותף שלהם לקראת עתיד משותף יותר בריא ומאושר.</p>
+            <p><b>טיפול זוגי מתמקד בקשר בין בני זוג ובפתרון בעיות המופיעות במערכת היחסים. הטיפול מאפשר לבני הזוג להבין את הצרכים והרגשות אחד של השני, לשפר את התקשורת ולבנות אמון מחודש. זהו תהליך שבו בני הזוג לומדים להתמודד עם קונפליקטים, לשפר את הקרבה והאינטימיות, ולחזק את הבסיס המשותף שלהם.</b></p><p> 
+<b>מתי אנשים פונים לטיפול זוגי ?</b><br>
+ כשמופיעים קשיים בתקשורת (מריבות, שתיקות, אי הבנות), שחיקה בזוגיות או התרחקות רגשית. בזמנים של שינויים משמעותיים, משברים או תקיעויות. על מנת לשפר את ההתנהלות סביב  אתגרי היום יום, וכשיש רצון להעמיק את הקשר או ללמוד כלים חדשים.</p><p>
+<b>מה עושים שם בפועל?</b><br>
+מדברים על רגשות, רצונות ופחדים – גם כאלה שקשה לדבר עליהם בבית. לומדים איך לריב נכון (כן, יש דבר כזה!), בלי לפגוע ובלי לשבור כלים. מבינים למה לפעמים בן/בת הזוג מגיבים בצורה מסוימת, ואיך אפשר להגיב אחרת. מקבלים כלים פרקטיים – איך להקשיב, איך לבקש, איך להתקרב מחדש.</p><p>
+<b>למי זה מתאים?</b><br>
+לזוגות בכל שלב: נשואים, חברים, טריים או ותיקים. זוגות בתהליך מיסוד הקשר, זוגות בפרק ב'.
+גם לזוגות עם משבר גדול, וגם למי שרוצה "תחזוקה מונעת". אפילו זוגות שמתלבטים אם להישאר יחד – לפעמים הטיפול עוזר לקבל החלטה.
+</p>
         </div>
     </div>
 </section>
 
+<section id="section3b">
+    <h2>תחומי טיפול</h2>
+	<div class="areas-container">
+	       <div class="area-item">
+            <div class="area-top">
+                <h3 class="area" onclick="toggleArea(this)">טיפול פרטני</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="arrowDown" onclick="toggleArea(this)">
+                    <path d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"></path>
+                </svg>
+            </div>
+            <div class="area-details"><p><b>טיפול פרטני הוא תהליך אישי שבו המטפל והמטופל עובדים יחד כדי להבין ולפתור בעיות רגשיות, פסיכולוגיות או התנהגותיות (קושי רגשי, משבר, תחושת תקיעות, חרדה, דיכאון, או כל אתגר נפשי אחר שמכביד). הטיפול מתמקד בצרכים ובמטרות האישיות של המטופל, תוך חיזוק הכוחות הפנימיים, בניית ביטחון עצמי, חיזוק תחושת הערך והיכולת האישית. זהו מסע של גילוי עצמי והעצמה, שבו המטופל מקבל כלים להתמודדות עם אתגרים ולקידום רווחה נפשית.</b></p><p>
+<b>מה קורה בטיפול ?</b><br>
+תוך שיחה פתוחה וכנה המטפל מקשיב, שואל, תומך, ומסייע לאדם להבין את עצמו טוב יותר, לעבד רגשות וחוויות עבר שממשיכות להשפיע על ההווה, לזהות דפוסים שמפריעים לו, ולמצוא דרכים חדשות להתמודד עם מצבים מורכבים.
+זהו מרחב בטוח, לא שיפוטי, שבו אפשר לדבר על הכול – גם על מה שקשה, מביך או מפחיד.</p><p>
+
+<b>למה לפנות לטיפול רגשי פרטני?</b><br>
+כי לפעמים גם אנשים חזקים צריכים עזרה. כי מגיע לך להרגיש טוב יותר. כי שינוי אמיתי מתחיל בצעד קטן – ופגישה אחת יכולה להיות הצעד הראשון שלך בדרך לחיים רגועים, מאוזנים ושמחים יותר.</p></div>
+        </div>
+		       <div class="area-item">
+            <div class="area-top">
+                <h3 class="area" onclick="toggleArea(this)">טיפול משפחתי</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="arrowDown" onclick="toggleArea(this)">
+                    <path d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"></path>
+                </svg>
+            </div>
+            <div class="area-details"><p><b>טיפול משפחתי מתמקד בתקשורת וביחסים בתוך המשפחה. זהו תהליך שבו כל בני המשפחה לוקחים חלק במטרה לשפר את הקשרים ביניהם ולהתמודד עם בעיות משפחתיות מורכבות. הטיפול מסייע למשפחות להבין את הדינמיקות הפנימיות, לבנות תמיכה הדדית, וליצור שינוי חיובי באווירה המשפחתית. מטרתו היא ליצור סביבה תומכת ומאוזנת לכל בני המשפחה.</b></p><p> 
+<b>מתי פונים לטיפול משפחתי ?</b><br>
+במצבים של מתחים חוזרים (ריבים בין אחים, בין הורים לילדים, בין בני זוג) או כשמרגישים שהמשפחה "תקועה" (תחושה של ריחוק, ניכור, או תקשורת לקויה) ורוצים שינוי. במצבי משבר (גירושין, אובדן, מחלה) או שינוי גדול (לידת ילד, מעבר דירה, עלייה לארץ). כשיש קושי רגשי או התנהגותי אצל אחד הילדים המשפיע על כל המשפחה.</p><p>
+<b>איך זה עובד ?</b><br>
+נפגשים עם מטפל משפחתי, לפעמים כולם יחד, לפעמים רק חלק מבני המשפחה, תלוי בצורך. הפגישות כוללות שיחה פתוחה, שבה כל אחד יכול להביע את עצמו ולשמוע את נקודת המבט של האחרים. מדברים על מה שמפריע, אבל גם על מה שעובד טוב. לומדים להקשיב, להבין, ליצר שיתוף פעולה ולנהל שיח מכבד. </p><p>
+<b>מה היתרון של טיפול משפחתי ?</b><br>
+בטיפול כזה לא מתמקדים רק באדם אחד אלא בוחנים את כל הדינמיקה המשפחתית: איך כל אחד משפיע על האחרים, ואיך הקשרים יוצרים את הבעיות וגם את הפתרונות. מכיוון שכולם לוקחים אחריות נוצרת הזדמנות אמיתית לשינוי.</p></div>
+        </div>
+        <div class="area-item">
+            <div class="area-top">
+                <h3 class="area" onclick="toggleArea(this)">טיפול זוגי</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="arrowDown" onclick="toggleArea(this)">
+                    <path d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"></path>
+                </svg>
+            </div>
+            <div class="area-details"><p><b>טיפול זוגי מתמקד בקשר בין בני זוג ובפתרון בעיות המופיעות במערכת היחסים. הטיפול מאפשר לבני הזוג להבין את הצרכים והרגשות אחד של השני, לשפר את התקשורת ולבנות אמון מחודש. זהו תהליך שבו בני הזוג לומדים להתמודד עם קונפליקטים, לשפר את הקרבה והאינטימיות, ולחזק את הבסיס המשותף שלהם.</b></p><p> 
+<b>מתי אנשים פונים לטיפול זוגי ?</b><br>
+ כשמופיעים קשיים בתקשורת (מריבות, שתיקות, אי הבנות), שחיקה בזוגיות או התרחקות רגשית. בזמנים של שינויים משמעותיים, משברים או תקיעויות. על מנת לשפר את ההתנהלות סביב  אתגרי היום יום, וכשיש רצון להעמיק את הקשר או ללמוד כלים חדשים.</p><p>
+<b>מה עושים שם בפועל?</b><br>
+מדברים על רגשות, רצונות ופחדים – גם כאלה שקשה לדבר עליהם בבית. לומדים איך לריב נכון (כן, יש דבר כזה!), בלי לפגוע ובלי לשבור כלים. מבינים למה לפעמים בן/בת הזוג מגיבים בצורה מסוימת, ואיך אפשר להגיב אחרת. מקבלים כלים פרקטיים – איך להקשיב, איך לבקש, איך להתקרב מחדש.</p><p>
+<b>למי זה מתאים?</b><br>
+לזוגות בכל שלב: נשואים, חברים, טריים או ותיקים. זוגות בתהליך מיסוד הקשר, זוגות בפרק ב'.
+גם לזוגות עם משבר גדול, וגם למי שרוצה "תחזוקה מונעת". אפילו זוגות שמתלבטים אם להישאר יחד – לפעמים הטיפול עוזר לקבל החלטה.
+</p></div>
+        </div>
+ 	</div>
+ 
+</section>
 <hr>
 
 <section id="section4">
-    <h2>איפה נפגש?</h2>
+    <h2>איך נפגשים?</h2>
     <div class="content">
         <div class="right">
             <img src="clinic.jpg" alt="Clinic">
@@ -522,7 +709,7 @@
     <div class="faq-container">
         <div class="faq-item">
             <div class="faq-top">
-                <h3 class="question" onclick="toggleAnswer(this)">מהם שעות הפעילות של המשרד?</h3>
+                <h3 class="question" onclick="toggleAnswer(this)">מהן שעות הפעילות של המשרד?</h3>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="arrowDown" onclick="toggleAnswer(this)">
                     <path d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"></path>
                 </svg>
@@ -579,6 +766,7 @@
 </section>
 
 <hr>
+</main>
 
 <footer id="section7">
     <div class="footer-column">
@@ -588,7 +776,6 @@
         <div class="footer-column-left">
             <p>054-4925259</p>
             <p>sharonsali1974@gmail.com</p>
-            <br>
             <p>גזית 1ב, זכרון יעקב</p>
         </div>
     </div>
@@ -628,6 +815,21 @@
             svgElement.innerHTML = '<path d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"></path>';
         } else {
             answer.style.display = 'block';
+            svgElement.innerHTML = '<path d="M8.14644661,14.858836 C7.95118446,14.6635739 7.95118446,14.3469914 8.14644661,14.1517292 L12.4989857,9.79289322 L16.8573469,14.1517292 C17.052609,14.3469914 17.052609,14.6635739 16.8573469,14.858836 C16.6620847,15.0540981 16.3455022,15.0540981 16.1502401,14.858836 L12.4989857,11.2071068 L8.85355339,14.858836 C8.65829124,15.0540981 8.34170876,15.0540981 8.14644661,14.858836 Z"></path>';
+        }
+    }
+	
+	   function toggleArea(element) {
+        const areaItem = element.closest('.area-item');
+        const areaDetails = areaItem.querySelector('.area-details');
+        const svgElement = areaItem.querySelector('svg');
+        const isExpanded = areaDetails.style.display === 'block';
+
+        if (isExpanded) {
+            areaDetails.style.display = 'none';
+            svgElement.innerHTML = '<path d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"></path>';
+        } else {
+            areaDetails.style.display = 'block';
             svgElement.innerHTML = '<path d="M8.14644661,14.858836 C7.95118446,14.6635739 7.95118446,14.3469914 8.14644661,14.1517292 L12.4989857,9.79289322 L16.8573469,14.1517292 C17.052609,14.3469914 17.052609,14.6635739 16.8573469,14.858836 C16.6620847,15.0540981 16.3455022,15.0540981 16.1502401,14.858836 L12.4989857,11.2071068 L8.85355339,14.858836 C8.65829124,15.0540981 8.34170876,15.0540981 8.14644661,14.858836 Z"></path>';
         }
     }

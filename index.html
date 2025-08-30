@@ -511,7 +511,7 @@
 			    max-width: 95%;
 			}
         }
-		@media (max-width: 370px) {
+		@media (max-width: 440px) {
             .section1_top .right h1 {
                 font-size: 40px;
             }
@@ -562,8 +562,6 @@
         <div class="button" onclick="document.getElementById('section5').scrollIntoView();">מה מספרים המטופלים?</div>
         <div class="button" onclick="document.getElementById('section6').scrollIntoView();">שאלות ותשובות</div>
     </div>
-	<h1>Current Viewport Width:</h1>
-	<p id="viewportWidth"></p>
 </section>
 
 <hr>
@@ -780,6 +778,8 @@
 </main>
 
 <footer id="section7">
+	<p id="viewportWidth"></p>
+
     <div class="footer-column">
         <div class="footer-column-right">
             שרון סלעי
@@ -793,16 +793,16 @@
 </footer>
 
 <script>
-function displayViewportWidth() {
-    const width = window.innerWidth;
-    document.getElementById('viewportWidth').textContent = `${width}px`;
-  }
+	function displayViewportWidth() {
+		const width = window.innerWidth;
+		document.getElementById('viewportWidth').textContent = `${width}px`;
+	}
 
-  // Initial display
-  displayViewportWidth();
+	// Initial display
+	displayViewportWidth();
 
-  // Update on window resize
-  window.addEventListener('resize', displayViewportWidth);
+	// Update on window resize
+	window.addEventListener('resize', displayViewportWidth);
   
   
     let currentSlide = 0;

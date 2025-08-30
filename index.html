@@ -562,6 +562,8 @@
         <div class="button" onclick="document.getElementById('section5').scrollIntoView();">מה מספרים המטופלים?</div>
         <div class="button" onclick="document.getElementById('section6').scrollIntoView();">שאלות ותשובות</div>
     </div>
+	<h1>Current Viewport Width:</h1>
+	<p id="viewportWidth"></p>
 </section>
 
 <hr>
@@ -791,6 +793,18 @@
 </footer>
 
 <script>
+function displayViewportWidth() {
+    const width = window.innerWidth;
+    document.getElementById('viewportWidth').textContent = `${width}px`;
+  }
+
+  // Initial display
+  displayViewportWidth();
+
+  // Update on window resize
+  window.addEventListener('resize', displayViewportWidth);
+  
+  
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
     const slideButtons = document.querySelectorAll('.slide-button');

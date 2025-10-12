@@ -555,7 +555,7 @@
             </div>
         </div>
         <div class="left">
-            <img src="sharon.jpg" alt="Sharon">
+            <img id="sharon_pic" src="sharon.jpg" alt="Sharon">
         </div>
     </div>
     <div id="section1_bottom" class="section1_bottom">
@@ -762,17 +762,37 @@
 			document.getElementById('section1_top').style.marginTop = extraToAdd/3 + `px`;	
 			document.getElementById('section1_top-inner-text').style.marginBottom = extraToAdd/6 + `px`;		
 
-			document.getElementById('log').textContent = `sec1HeightOrigHeighL ${sec1HeightOrigHeigh}px, newSec1Height ${newSec1Height}px, , extraToAdd ${extraToAdd}px`;			
+			document.getElementById('log').textContent = `2: sec1HeightOrigHeighL ${sec1HeightOrigHeigh}px, newSec1Height ${newSec1Height}px, , extraToAdd ${extraToAdd}px`;			
 		}		
 	}
 	
 	// Update on window resize
 	window.addEventListener('resize', updateSizes); 
   
+	 function waitForImageLoad(imgElement) {
+		return new Promise((resolve, reject) => {
+			// Check if the image is already complete
+			if (imgElement.complete) {
+				// An image can be "complete" but broken (e.g., 404).
+				// A naturalWidth of 0 indicates a failed load.
+				if (imgElement.naturalWidth > 0) {
+					resolve(imgElement);
+				} else {
+					reject(new Error('Image failed to load (already complete but broken).'));
+				}
+			} else {
+				// If not complete, wait for the load and error events
+				imgElement.addEventListener('load', () => resolve(imgElement));
+				imgElement.addEventListener('error', () => reject(new Error('Image failed to load.')));
+			}
+		});
+	}
+	
 	async function updateSection1SizesOnLoad() {
 		// Wait for all fonts to be loaded and applied
 		await document.fonts.ready;
-
+		await waitForImageLoad(document.getElementById('sharon_pic'));
+		
 		// Now it's safe to measure
 		updateSizes();
 	}

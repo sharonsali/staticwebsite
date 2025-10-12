@@ -722,6 +722,7 @@
 <footer id="section7">
  	<p id="viewportWidth"></p>
 	<p id="viewportHeight"></p>	
+	<p id="log"></p>	
  	
     <div class="footer-column">
         <div class="footer-column-right">
@@ -749,19 +750,19 @@
 		}
 		
 		/* resize section 1 height */
-		if (width > height || true) {
-			const topBar = document.getElementById('topBar');
-			const topBarHeight = topBar.offsetHeight;			
+		const topBar = document.getElementById('topBar');
+		const topBarHeight = topBar.offsetHeight;			
+		
+		const newSec1Height = (height - topBarHeight) * 0.93;
+		if (newSec1Height > sec1HeightOrigHeigh) {
+			sec1.style.height = newSec1Height + 'px';
+			const extraToAdd = newSec1Height - sec1HeightOrigHeigh;
 			
-			const newSec1Height = (height - topBarHeight) * 0.93;
-			if (newSec1Height > sec1HeightOrigHeigh) {
-				sec1.style.height = newSec1Height + 'px';
-				const extraToAdd = newSec1Height - sec1HeightOrigHeigh;
-				
-				/*section1_top-inner-text*/
-				document.getElementById('section1_top').style.marginTop = extraToAdd/3 + `px`;	
-				document.getElementById('section1_top-inner-text').style.marginBottom = extraToAdd/6 + `px`;				
-			}
+			/*section1_top-inner-text*/
+			document.getElementById('section1_top').style.marginTop = extraToAdd/3 + `px`;	
+			document.getElementById('section1_top-inner-text').style.marginBottom = extraToAdd/6 + `px`;		
+
+			document.getElementById('log').textContent = `sec1HeightOrigHeighL ${sec1HeightOrigHeigh}px, newSec1Height ${newSec1Height}px, , extraToAdd ${extraToAdd}px`;			
 		}		
 	}
 	

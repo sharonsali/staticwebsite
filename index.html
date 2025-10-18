@@ -291,41 +291,7 @@
             word-wrap: break-word;
         }
 		
-		.areas-container {
-			width: 90%;
-            margin: 0 auto;
-        }
-        .area-item {
-            border-bottom: 1px solid #ccc;
-            padding: 10px 0;
-            cursor: pointer;
-        }
-        .area-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .area-top .area {
-            text-align: right;
-            font-weight: bold;
-            font-size: 28px;
-            margin: 0;
-            flex: 1;
-            cursor: pointer;
-        }
-        .area-top svg {
-            cursor: pointer;
-            margin-left: 10px;
-        }
-        .area-details {
-            display: none;
-            padding-top: 5px;
-            text-align: right;
-            font-size: 24px;
-            /*font-family: 'Quicksand', sans-serif;*/
-            word-wrap: break-word;
-        }
-		
+			
         .footer-column {
             display: flex;
             align-items: flex-start;
@@ -350,7 +316,7 @@
             width: 80%;
             margin: 0 auto;
             text-align: center;
-            font-size: 26px;
+            font-size: 20px;
             color: #555;
             /*max-width: 500px;*/
         }
@@ -682,7 +648,7 @@
     <div class="faq-container">
         <div class="faq-item">
             <div class="faq-top">
-                <h3 class="question" onclick="toggleAnswer(this)">כמה זמן נמשך טיפול זוגי/משפחתי?</h3>
+                <h3 class="question" tabindex="0" onkeydown="toggleAnswerKeyboard(this)" onclick="toggleAnswer(this)">כמה זמן נמשך טיפול זוגי/משפחתי?</h3>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="arrowDown" onclick="toggleAnswer(this)">
                     <path d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"></path>
                 </svg>
@@ -691,7 +657,7 @@
         </div>
         <div class="faq-item">
             <div class="faq-top">
-                <h3 class="question" onclick="toggleAnswer(this)">האם את מטפלת גם במקרים של קשיים עם ילדים או מתבגרים?</h3>
+                <h3 class="question" tabindex="0" onkeydown="toggleAnswerKeyboard(this)" onclick="toggleAnswer(this)">האם את מטפלת גם במקרים של קשיים עם ילדים או מתבגרים?</h3>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="arrowDown" onclick="toggleAnswer(this)">
                     <path d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"></path>
                 </svg>
@@ -700,7 +666,7 @@
         </div>
         <div class="faq-item">
             <div class="faq-top">
-                <h3 class="question" onclick="toggleAnswer(this)">כיצד מתנהלת פגישת הייעוץ הראשונה?</h3>
+                <h3 class="question" tabindex="0" onkeydown="toggleAnswerKeyboard(this)" onclick="toggleAnswer(this)">כיצד מתנהלת פגישת הייעוץ הראשונה?</h3>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="arrowDown" onclick="toggleAnswer(this)">
                     <path d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"></path>
                 </svg>
@@ -709,7 +675,7 @@
         </div>
         <div class="faq-item">
             <div class="faq-top">
-                <h3 class="question" onclick="toggleAnswer(this)">מתי כדאי לפנות לטיפול זוגי/משפחתי?</h3>
+                <h3 class="question" tabindex="0" onkeydown="toggleAnswerKeyboard(this)" onclick="toggleAnswer(this)">מתי כדאי לפנות לטיפול זוגי/משפחתי?</h3>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="arrowDown" onclick="toggleAnswer(this)">
                     <path d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"></path>
                 </svg>
@@ -840,21 +806,16 @@
         }
     }
 	
-	   function toggleArea(element) {
-        const areaItem = element.closest('.area-item');
-        const areaDetails = areaItem.querySelector('.area-details');
-        const svgElement = areaItem.querySelector('svg');
-        const isExpanded = areaDetails.style.display === 'block';
-
-        if (isExpanded) {
-            areaDetails.style.display = 'none';
-            svgElement.innerHTML = '<path d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"></path>';
-        } else {
-            areaDetails.style.display = 'block';
-            svgElement.innerHTML = '<path d="M8.14644661,14.858836 C7.95118446,14.6635739 7.95118446,14.3469914 8.14644661,14.1517292 L12.4989857,9.79289322 L16.8573469,14.1517292 C17.052609,14.3469914 17.052609,14.6635739 16.8573469,14.858836 C16.6620847,15.0540981 16.3455022,15.0540981 16.1502401,14.858836 L12.4989857,11.2071068 L8.85355339,14.858836 C8.65829124,15.0540981 8.34170876,15.0540981 8.14644661,14.858836 Z"></path>';
-        }
-    }
-	
+	function toggleAnswerKeyboard(element) {
+		// Check if the key pressed was 'Enter' or 'Space'
+		if (event.key === 'Enter' || event.key === ' ') {
+			// Prevent the default action (e.g., space scrolling the page)
+			event.preventDefault();
+			// Trigger the same function as the click
+			toggleAnswer(element);
+		}
+	}
+		
 	function smoothScrollTo(elementId) {
 		const targetElement = document.getElementById(elementId);
 		if (!targetElement) return;

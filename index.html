@@ -523,15 +523,15 @@
             </div>
         </div>
         <div class="left">
-            <img id="sharon_pic" src="sharon.jpg" alt="Sharon">
+            <img id="sharon_pic" src="sharon.jpg" alt="Picture of Sharon">
         </div>
     </div>
     <div id="section1_bottom" class="section1_bottom">
-        <div class="button" onclick="smoothScrollTo('section2');">קצת עלי</div>
-        <div class="button" onclick="smoothScrollTo('section3');">תחומי טיפול</div>
-        <div class="button" onclick="smoothScrollTo('section4');">איך נפגשים?</div>
-        <div class="button" onclick="smoothScrollTo('section5');">מה מספרים המטופלים?</div>
-        <div class="button" onclick="smoothScrollTo('section6');">שאלות נפוצות</div>
+        <div class="button" tabindex="0" onkeydown="smoothScrollToByKeyboard('section2');" onclick="smoothScrollTo('section2');">קצת עלי</div>
+        <div class="button" tabindex="0" onkeydown="smoothScrollToByKeyboard('section3');" onclick="smoothScrollTo('section3');">תחומי טיפול</div>
+        <div class="button" tabindex="0" onkeydown="smoothScrollToByKeyboard('section4');" onclick="smoothScrollTo('section4');">איך נפגשים?</div>
+        <div class="button" tabindex="0" onkeydown="smoothScrollToByKeyboard('section5');" onclick="smoothScrollTo('section5');">מה מספרים המטופלים?</div>
+        <div class="button" tabindex="0" onkeydown="smoothScrollToByKeyboard('section6');" onclick="smoothScrollTo('section6');">שאלות נפוצות</div>
     </div>
 </section>
 
@@ -833,6 +833,16 @@
 			top: offsetPosition,
 			behavior: 'smooth'
 		});
+	}
+
+	function smoothScrollToByKeyboard(elementId) {
+		// Check if the key pressed was 'Enter' or 'Space'
+		if (event.key === 'Enter' || event.key === ' ') {
+			// Prevent the default action (e.g., space scrolling the page)
+			event.preventDefault();
+			// Trigger the same function as the click
+			smoothScrollTo(elementId);
+		}
 	}
 
 </script>

@@ -711,13 +711,26 @@
         </div>
     </div>
 	<p>© כל הזכויות באתר שמורות לשרון סלעי  |  <a href=" accessibility.html"> הצהרת נגישות</a></p>
+	<p id='debugLog'></p>
 </footer>
 
 <script>
+	//check if in debug mode
+	let debug = false;
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+	if (urlParams.has('debug')) {
+		debug = true;
+	}
+	
 	let sec1HeightOrigHeigh = 0
 	function updateSizes() {
 		const width = window.innerWidth;
 		const height = window.innerHeight;
+		if (debug) {
+			document.getElementById('debugLog').textContent = `w:${width} h:${height}`
+		}
+		
 		const sec1 = document.getElementById('section1');
 		if (sec1HeightOrigHeigh == 0) {
 			sec1HeightOrigHeigh = sec1.offsetHeight;

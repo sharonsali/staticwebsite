@@ -470,7 +470,7 @@
           
             .footer-column-left, .footer-column-right {
                 min-width: auto;
-                padding: 10px;
+                padding: 0px;
             }
 			.footer-column-right {
                 font-size: 36px;
@@ -489,8 +489,23 @@
 		   .slide-button {
 				font-size: 120%; 
 			}
+            .footer-column-left, .footer-column-right {
+                min-width: auto;
+				max-width: 100%;
+                padding: 0px;
+            }
 			.footer-column-right {
-				font-size: 28px;			
+				font-size: 28px;	
+				max-width: 60px;
+			}
+			.footer-column-left p {
+				max-width: 100%;
+				font-size: 16px;
+			}
+		}
+		@media (max-width: 360px) and (pointer: coarse){
+			.footer-column-left p {
+				font-size: 12px;
 			}
 		}
 		

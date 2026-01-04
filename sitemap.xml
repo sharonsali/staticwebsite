@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.sharonsali.co.il/</loc> <!-- Your main page -->
     <lastmod>2025-10-18</lastmod> 
@@ -7,7 +8,7 @@
     <priority>1.0</priority>
     <!-- IMAGE EXTENSIONS FOR THE MAIN PAGE -->
     <image:image>
-      <image:loc>https://www.sharonsali.co.il/sharon.jpg</image:loc> <!-- URL of Sharon's picture -->
+      <image:loc>https://www.sharonsali.co.il/sharon_self.jpg</image:loc> <!-- URL of Sharon's picture -->
       <image:caption>שרון סלעי - מטפלת זוגית ומשפחתית מוסמכת בזכרון יעקב</image:caption> <!-- Descriptive caption -->
       <image:title>שרון סלעי - מטפלת זוגית ומשפחתית מוסמכת</image:title> <!-- Title for the image -->
     </image:image>
